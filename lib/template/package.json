@@ -1,0 +1,40 @@
+{
+  "name": "appname",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.config.js --mode development",
+    "build": "webpack --config config/webpack.production.config.jd --mode production --progress"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-react-transform": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react-hot-loader": "^4.6.3",
+    "react-redux": "^6.0.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "autoprefixer": "^9.4.6",
+    "css-loader": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-merge": "^4.2.1"
+  }
+}
