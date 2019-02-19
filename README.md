@@ -1,8 +1,8 @@
 #db-cli 使用  
   
 ```
-tnpm install @ali/recd-cli -g
-recd-cli init [appName]
+tnpm install @ali/recdi-cli -g
+recdi-cli init [appName]
 npm install 
 npm run dev 开发环境启动
 npm run build 打包

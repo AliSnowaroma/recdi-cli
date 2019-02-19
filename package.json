@@ -1,13 +1,13 @@
 {
-  "name": "@ali/recd-cli",
-  "version": "1.0.1",
+  "name": "recdi-cli",
+  "version": "1.0.0",
   "description": "react 分布式路由脚手架",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "recd-cli": "bin/bin.js"
+    "recdi-cli": "bin/bin.js"
   },
   "keywords": [
     "distribute",
@@ -15,8 +15,9 @@
   ],
   "author": "lwz",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliSnowaroma/recdi-cli.git"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
