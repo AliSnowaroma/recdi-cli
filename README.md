@@ -1,4 +1,4 @@
-#db-cli 使用  
+# db-cli 使用  
   
 ```
 tnpm install @ali/recdi-cli -g
@@ -8,25 +8,25 @@ npm run dev 开发环境启动
 npm run build 打包
 ```
 
-##项目结构：这里不再累述，典型react单页面结构  
+## 项目结构：这里不再累述，典型react单页面结构  
 
 
-#分布式路由结构(基于react-router)  
+# 分布式路由结构(基于react-router)  
 
-##核心思想  
-每个模块都有一个对应的路由路径，使用时把这些路径组合起来
+## 核心思想  
+### 每个模块都有一个对应的路由路径，使用时把这些路径组合起来
 
-##路由结构  
+## 路由结构  
 1，所有的路由配置集成在routes文件夹，总的来说routes文件夹的结构和pages下文件夹的结构是相同的  
 2，对应源码结构：generate-route  
   CreateRouteContainer --- 创建路由容器  
   RouteContainer --- 路由容器，生成路由结构  
   RenderRouteItem --- 渲染单个路由，如果路由路径对应的是路由容器，会再次调用该渲染  
 
-##使用方法：  
+## 使用方法：  
 创建模块时，创建对应的Route.js路由文件，在路由配置文件夹下引用该文件  
 例子：
-  ###建立一级路由：  
+  ### 建立一级路由：  
   如一级路由/pagetest,对应模板中的PageTest.js模块  
   在routes文件夹下index.js对应一级路由，把路由文件放进该文件中，一级路由配置完成  
   ```
@@ -35,13 +35,13 @@ npm run build 打包
     return it;
   })
   ```
-  ###建立二级路由  
+  ### 建立二级路由  
   比如创建模板中mypage页面，mypage对应路径mypage,detail
   ####pages下模块创建：  
   1，创建mypage文件夹  
   2，mypage文件夹下创建list文件夹  
   3，list下创建List.js和Route.js  
-  ####routes下创建路由配置  
+  #### routes下创建路由配置  
   1，routes下创建mypage文件夹，并建立index.js路由配置文件，其下放置的是以/mypage开头路由的配置  
   2，mypage下创建list文件夹，list文件夹下创建index.js文件，其下放置的是以/list开头路由的配置  
   3，配置list下index.js路由配置文件：  
@@ -84,7 +84,7 @@ npm run build 打包
     ```
     这里引入刚才设置的list路由配置文件，作为/mypage/list开头的路由  
     上面设置了/mypage的默认首页路由/nav，默认跳转到/mypage/nav，如果不设置，则默认跳转到/mypage/list  
-  ####创建带有布局的模块组件  
+  #### 创建带有布局的模块组件  
     
   比如上述mypage模块，不单纯是一个路由容器组件，也不单纯是一个页面组件，而是二者的结合，既要展示内容，又要充当容器，  
   也就是说mypage模块的内容会在以/mypage路由开头的路径中展示，这时，需要在mypage组件中引用RouterContainer,和内容结合  
@@ -134,7 +134,7 @@ npm run build 打包
   ```
   此时/detail路由对应Detail模块  
 
-  ###设置页面布局  
+  ### 设置页面布局  
   像上面的带布局的组件可以提取为页面布局，放到layouts中，方便管理，布局创建方式同上
 
 
